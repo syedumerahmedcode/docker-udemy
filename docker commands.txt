@@ -39,4 +39,5 @@ docker tag nginx:latest nginx:myblog_stable
 more Dockerfile
 --> Used to see the contents of dockerfile. 'more' command is specific to windows. For Linux, please use 'less'.
 
-
+ docker build -t mynginx .
+ --> Used for building an image from a Dockerfile locally present in the folder from which the command is executed via the command prompt.

@@ -1,0 +1,42 @@
+docker version
+
+sudo docker version
+
+--> gives docker version information.
+
+
+sudo docker run -dit debian
+
+--> Runs the docker command for debain image.
+
+docker ps
+--> Gives a list of docker containers.
+
+sudo docker images
+--> Gives a list of docker images.
+
+docker stop cf0638282adb
+--> Stops the docker container based on the id.
+
+sudo docker inspect 0d01188e8dd0
+--> Used for inspecting docker container using specific hash.
+
+docker pull nginx
+--> Pulls the nginx image from dockerhub.
+
+sudo docker history nginx
+--> Gives the history of the docker image in question.
+
+sudo docker images --no-trunc
+--> No truncation of information.
+
+docker tag --help
+--> Gives information about the tag command of docker.
+
+docker tag nginx:latest nginx:myblog_stable
+--> Creates an alias using the source tag name 'latest' to target tag name 'myblog_stable'.
+
+more Dockerfile
+--> Used to see the contents of dockerfile. 'more' command is specific to windows. For Linux, please use 'less'.
+
+

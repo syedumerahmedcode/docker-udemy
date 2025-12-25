@@ -1,15 +1,16 @@
 # Abbreviated Dockerfile for nginx
 
-FROM debian:buster-slim
+FROM debian:bookworm-slim
 LABEL maintainer="NGINX Docker Maintainers <docker-maint@nginx.com>"
 
-ENV NGINX_VERSION   1.17.2
-ENV NJS_VERSION     0.3.3
-ENV PKG_RELEASE     1~buster
+ENV NGINX_VERSION=1.17.2
+ENV NJS_VERSION=0.3.3
+ENV PKG_RELEASE=1~buster
 
 RUN apt-get update \
-    && apt-get install -y nginx \
-    && apt-get clean
+    && apt-get install -y --no-install-recommends nginx \
+    && rm -rf /var/lib/apt/lists/*
+    
 
 RUN ln -sf /dev/stdout /var/log/nginx/access.log \
     && ln -sf /dev/stderr /var/log/nginx/error.log

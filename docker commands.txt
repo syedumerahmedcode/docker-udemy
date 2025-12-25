@@ -49,3 +49,6 @@ docker rmi nginx:myblog_stable
 
 docker image prune
 --> Cleans up disk space.
+
+ docker system df
+ --> Check the disk free on the system

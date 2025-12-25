@@ -42,3 +42,4 @@ more Dockerfile
  docker build -t mynginx .
  --> Used for building an image from a Dockerfile locally present in the folder from which the command is executed via the command prompt.
  -t allows to name a tag for our image.
+ . tells the docker to use the Dockerfile in the current directory.

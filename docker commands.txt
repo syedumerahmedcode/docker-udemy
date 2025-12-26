@@ -76,3 +76,6 @@ sudo docker inspect umer2 | grep -A3 RestartPolicy
 --> sudo docker inspect umer2: Used for inspecting the container named 'umer2'
 --> grep -A3 RestartPolicy: grabs the word 'RestartPolicy'.
     -A flag not only grabs the matching line but also 3 lines after it.
+
+docker logs -tf 4f353
+--> Logs the container with id given.t=Timestamp f=follow(similar to tail -f)

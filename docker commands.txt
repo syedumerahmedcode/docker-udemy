@@ -52,3 +52,9 @@ docker image prune
 
  docker system df
  --> Check the disk free on the system
+
+ docker search
+ --> Search Docker Hub for images
+
+sudo docker run -dit --name=web debian
+--> Using --name=web, we can name the docker container as web.

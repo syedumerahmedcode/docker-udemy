@@ -105,3 +105,14 @@ docker exec -it c248a5bf0846 /bin/bash
 sudo docker build -t jasonc/dockerping:latest .
 --> creates an image based on the Dockerfile. Here, '.' at the end means: use the cuirrent directory.
 
+docker push jasonc/dockerping:latest
+--> Pushes an image to the docker hub repository.
+
+How to override the entrypoint from command line?
+docker run --entrypoint /usr/bin/curl -it jasonc/nettools google.com
+
+incase docker file is not named 'Dockerfile'(but something else) and it is based in another folder?
+docker build -t jasonc/nettools:allow-override -f nettools/nettools-Dockerfile-allow-override .
+
+Here, 'nettools/nettools-Dockerfile-allow-override' is the name of the dockerfile and '.(at the end of the command)'
+specific to use the current directory.

@@ -58,3 +58,21 @@ docker image prune
 
 sudo docker run -dit --name=web debian
 --> Using --name=web, we can name the docker container as web.
+
+sudo docker ps -a
+--> Shows all containers(running as well as stopped) in the system.
+
+docker stop web
+--> Stops the container with the name web.
+
+docker rm web
+--> Removes a container of name web.
+
+sudo docker run -dit --restart=always --name=umer2 debian
+--> Using this command, docker will restart the container incase of a server failure and subsequent bootup
+without the need for manual human intervention.
+
+sudo docker inspect umer2 | grep -A3 RestartPolicy
+--> sudo docker inspect umer2: Used for inspecting the container named 'umer2'
+--> grep -A3 RestartPolicy: grabs the word 'RestartPolicy'.
+    -A flag not only grabs the matching line but also 3 lines after it.

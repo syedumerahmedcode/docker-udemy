@@ -79,3 +79,14 @@ sudo docker inspect umer2 | grep -A3 RestartPolicy
 
 docker logs -tf 4f353
 --> Logs the container with id given.t=Timestamp f=follow(similar to tail -f)
+
+
+### Making container publicly available
+
+sudo docker run --name our_nginx -d -p 8080:80 nginx
+-->8080:80 Open up a TCP port 8080 on the docker host machine and redirect traffic to and from it 
+to the TCP port 80 inside the nginx container.
+
+8080: Outside world port
+80: Inside world port of the container.
+

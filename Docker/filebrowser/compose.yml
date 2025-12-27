@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  filebrowser:
+    image: hurlenko/filebrowser
+    user: "1000:1000"
+    ports:
+      - 6443:8080
+    volumes:
+      - C:\ImportantDownloads\codeprojects\docker\Docker\filebrowser\data:/data
+      - C:\ImportantDownloads\codeprojects\docker\Docker\filebrowser\config:/config
+    environment:
+      - FB_BASEURL=/filebrowser
+    restart: always
+      

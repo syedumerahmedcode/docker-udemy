@@ -137,3 +137,7 @@ docker run -d --name withvolume --mount source=mydata1,destination=/root/volume 
 docker run -d --name readcontainer --mount src=newestvolume,dst=/usr/share/nginx/html,readonly nginx
 --> Starts a docker container with a readonly volume mount.
 
+
+
+Run Docker in Windows - Setup, Docker Compose, Extensions
+https://www.youtube.com/watch?v=cMyoSkQZ41E

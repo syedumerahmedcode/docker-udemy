@@ -131,3 +131,9 @@ docker volume rm testdata
 docker volume inspect mydata1
 --> Using this command, we can inspect volume of name 'mydata1'
 
+docker run -d --name withvolume --mount source=mydata1,destination=/root/volume nginx
+--> starts a docker container with the given volume mount.
+
+docker run -d --name readcontainer --mount src=newestvolume,dst=/usr/share/nginx/html,readonly nginx
+--> Starts a docker container with a readonly volume mount.
+

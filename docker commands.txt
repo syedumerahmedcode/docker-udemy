@@ -116,3 +116,18 @@ docker build -t jasonc/nettools:allow-override -f nettools/nettools-Dockerfile-a
 
 Here, 'nettools/nettools-Dockerfile-allow-override' is the name of the dockerfile and '.(at the end of the command)'
 specific to use the current directory.
+
+### Docker volumes
+docker volume create testdata
+-->Creates volume by the name testdata.
+
+docker volume ls
+--> Gives out a list of volumes.
+
+
+docker volume rm testdata
+--> removes the 'testdata' volume.
+
+docker volume inspect mydata1
+--> Using this command, we can inspect volume of name 'mydata1'
+
